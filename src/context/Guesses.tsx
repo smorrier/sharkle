@@ -52,7 +52,6 @@ export function GuessesProvider({ children }: { children: ReactNode }) {
 				{ value: guess, correctCharacters, correctPlaces },
 			];
 			setGuesses(newGuesses);
-			console.log({ newHasWon });
 			setHasWon(newHasWon);
 			setHasLost(newGuesses.length >= 6);
 			return newGuesses;

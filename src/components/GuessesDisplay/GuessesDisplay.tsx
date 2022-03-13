@@ -14,12 +14,13 @@ export default function GuessesDisplay({
 	const { input } = useKeyboardInput();
 
 	const fillerGuesses = useMemo(() => {
-		const pad = numberOfGuesses - guesses.length - 1;
+		const pad = numberOfGuesses - guesses.length;
 		if (pad <= 0) {
 			return [];
 		}
-		return Array(5).fill({ value: "     " }, 0, pad).slice(0, pad);
-	}, [guesses, numberOfGuesses]);
+		let newPad = pad + (hasLost || hasWon ? 1 : -1);
+		return Array(5).fill({ value: "     " }, 0, newPad).slice(0, newPad);
+	}, [guesses, numberOfGuesses, hasLost, hasWon]);
 
 	const guess = useMemo(() => {
 		return { value: input.padEnd(5, " ") };
