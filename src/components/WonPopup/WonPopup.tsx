@@ -16,7 +16,7 @@ export default function WonPopup() {
 			<div className="Title">You Won!</div>
 			<div className="Content">
 				<div>Great Job</div>
-				<img src={victoryShark} />
+				<img src={victoryShark} alt="Happy Shark" />
 			</div>
 		</Popup>
 	);

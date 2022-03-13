@@ -16,7 +16,7 @@ export default function LostPopup() {
 			<div className="Title">You Lost!</div>
 			<div className="Content">
 				<div>R U DUM??</div>
-				<img src={defeatShark} />
+				<img src={defeatShark} alt="Sad Shark" />
 			</div>
 		</Popup>
 	);
