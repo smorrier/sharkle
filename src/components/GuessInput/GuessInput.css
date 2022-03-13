@@ -1,0 +1,9 @@
+.GuessInput {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.GuessInput .Keyboard {
+	margin-top: 1rem;
+}

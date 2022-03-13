@@ -1,0 +1,30 @@
+.LostPopup-content {
+	background-color: var(--primary) !important;
+	border: 1px solid white !important;
+	color: white;
+}
+
+.LostPopup-content .Title,
+.LostPopup-content .Content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 12px;
+}
+
+.LostPopup-content .Title {
+	border-bottom: 1px solid white;
+	font-size: 28px;
+	margin: 0 -5px;
+}
+
+.LostPopup-content .Content {
+	font-size: 18px;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.LostPopup-content .Content img {
+	max-width: 100%;
+	object-fit: contain;
+}

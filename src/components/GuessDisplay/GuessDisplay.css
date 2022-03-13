@@ -1,0 +1,26 @@
+.GuessDisplay {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.GuessDisplay .GuessLetter {
+	background-color: #212121;
+	border: 1px solid white;
+	border-radius: 4px;
+	color: white;
+	width: 64px;
+	height: 64px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 22px;
+	font-weight: 800;
+}
+
+.GuessDisplay .GuessLetter.Corrent {
+	background-color: #006e09;
+}
+
+.GuessDisplay .GuessLetter.PartiallyCorrent {
+	background-color: #d8b000;
+}
