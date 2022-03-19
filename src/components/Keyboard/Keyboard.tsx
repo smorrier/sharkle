@@ -35,13 +35,13 @@ export default function Keyboard() {
 				{[...middleRow].map((char: string) => {
 					return <Key key={char} char={char} />;
 				})}
+				<Key char={"Backspace"} text="bksp" className="Backspace" />
 			</div>
 			<div className="KeyboardRow bottomRow">
-				<Key char={"Enter"} className="Enter" />
 				{[...bottomRow].map((char: string) => {
 					return <Key key={char} char={char} />;
 				})}
-				<Key char={"Backspace"} text="bksp" className="Backspace" />
+				<Key char={"Enter"} className="Enter" />
 			</div>
 		</div>
 	);

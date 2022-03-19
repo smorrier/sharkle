@@ -6,14 +6,17 @@ import reportWebVitals from "./reportWebVitals";
 import { KeyboardInputProvider } from "./context/KeyboardInput";
 import { GuessesProvider } from "./context/Guesses";
 import "reactjs-popup/dist/index.css";
+import { ScreenSizeProvider } from "./context/ScreenSize";
 
 ReactDOM.render(
 	<React.StrictMode>
-		<GuessesProvider>
-			<KeyboardInputProvider>
-				<App />
-			</KeyboardInputProvider>
-		</GuessesProvider>
+		<ScreenSizeProvider>
+			<GuessesProvider>
+				<KeyboardInputProvider>
+					<App />
+				</KeyboardInputProvider>
+			</GuessesProvider>
+		</ScreenSizeProvider>
 	</React.StrictMode>,
 	document.getElementById("root")
 );
