@@ -8,6 +8,7 @@ import "./Sharkle.css";
 
 export default function Sharkle() {
 	const { hasLost, hasWon } = useGuesses();
+
 	return (
 		<div className="Sharkle">
 			{hasWon && <WonPopup />}

@@ -8,7 +8,10 @@
 	  "setup": "npm run install-client",
 	  "test-client": "cd client && npm run test",
 	  "build-client": "cd client && npm run build",
-	  "install-client": "cd client && npm i"
+	  "install-client": "cd client && npm i",
+	  "server": "cd server && nodemon",
+	  "start-server": "cd server && npm start",
+	  "install-server": "cd server && npm i"
 	}
   }
   

@@ -4,8 +4,10 @@ import React, {
 	useContext,
 	ReactNode,
 	useMemo,
+	useEffect,
 } from "react";
 import { Guess } from "../@types/Guess.types";
+import wordAPI from "../apis/wordAPI";
 
 interface GuessesContextI {
 	addGuess: (e: string) => Guess[];
@@ -19,11 +21,18 @@ const GuessesContext = createContext<GuessesContextI>({
 	hasWon: false,
 	hasLost: false,
 });
-const response = ["S", "H", "A", "R", "K"];
+
 export function GuessesProvider({ children }: { children: ReactNode }) {
+	const [response, setResponse] = useState<string[]>([]);
 	const [guesses, setGuesses] = useState<Guess[]>([]);
 	const [hasWon, setHasWon] = useState<boolean>(false);
 	const [hasLost, setHasLost] = useState<boolean>(false);
+
+	useEffect(() => {
+		wordAPI.get().then(({ data }) => {
+			setResponse(data.data);
+		});
+	}, []);
 
 	const addGuess = useMemo(() => {
 		return function (guess: string) {
@@ -56,7 +65,7 @@ export function GuessesProvider({ children }: { children: ReactNode }) {
 			setHasLost(newGuesses.length >= 6);
 			return newGuesses;
 		};
-	}, [guesses, hasLost, hasWon]);
+	}, [response, guesses, hasLost, hasWon]);
 
 	return (
 		<GuessesContext.Provider value={{ addGuess, guesses, hasWon, hasLost }}>

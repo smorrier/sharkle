@@ -7,6 +7,7 @@ import { KeyboardInputProvider } from "./context/KeyboardInput";
 import { GuessesProvider } from "./context/Guesses";
 import "reactjs-popup/dist/index.css";
 import { ScreenSizeProvider } from "./context/ScreenSize";
+import "./constants/axios";
 
 ReactDOM.render(
 	<React.StrictMode>
