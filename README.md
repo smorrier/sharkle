@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-Try it at https://sharkle-1komrhntx-smorrier.vercel.app/
+Try it at https://sharkle-smorrier.vercel.app/
 
 ### `npm start`
 
