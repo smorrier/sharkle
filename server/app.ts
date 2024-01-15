@@ -13,13 +13,8 @@ const { NODE_ENV } = process.env
 const app = express()
 
 
-if (NODE_ENV === 'production') {
-	app.use(
-		cors({ origin: JSON.parse(process.env.CORS_ALLOWED_ORIGINS || '') })
-	)
-} else {
-	app.use(cors({ origin: true }))
-}
+app.use(cors({ origin: true }))
+
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 

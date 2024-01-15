@@ -2,16 +2,17 @@
 	"name": "sharkle",
 	"version": "0.1.0",
 	"private": true,
-	"dependencies": {},
+	"dependencies": {
+		"nodemon": "^3.0.2"
+	},
 	"scripts": {
-	  "client": "cd client && npm start",
-	  "setup": "npm run install-client",
-	  "test-client": "cd client && npm run test",
-	  "build-client": "cd client && npm run build",
-	  "install-client": "cd client && npm i",
-	  "server": "cd server && nodemon",
-	  "start-server": "cd server && npm start",
-	  "install-server": "cd server && npm i"
+		"client": "cd client && npm start",
+		"setup": "npm run install-client",
+		"test-client": "cd client && npm run test",
+		"build-client": "cd client && npm run build",
+		"install-client": "cd client && npm i",
+		"server": "cd server && nodemon",
+		"start-server": "cd server && npm start",
+		"install-server": "cd server && npm i"
 	}
-  }
-  
+}
