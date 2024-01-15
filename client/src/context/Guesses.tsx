@@ -38,7 +38,6 @@ export function GuessesProvider({ children }: { children: ReactNode }) {
 				setResponse(["S", "H", "A", "R", "K"]);
 			});
 	}, []);
-	console.log(response);
 
 	const addGuess = useMemo(() => {
 		return function (guess: string) {
