@@ -29,10 +29,16 @@ export function GuessesProvider({ children }: { children: ReactNode }) {
 	const [hasLost, setHasLost] = useState<boolean>(false);
 
 	useEffect(() => {
-		wordAPI.get().then(({ data }) => {
-			setResponse(data.data);
-		});
+		wordAPI
+			.get()
+			.then(({ data }) => {
+				setResponse(data.data);
+			})
+			.catch(() => {
+				setResponse(["S", "H", "A", "R", "K"]);
+			});
 	}, []);
+	console.log(response);
 
 	const addGuess = useMemo(() => {
 		return function (guess: string) {
